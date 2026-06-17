@@ -20,6 +20,9 @@ export const Navbar = () => {
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };

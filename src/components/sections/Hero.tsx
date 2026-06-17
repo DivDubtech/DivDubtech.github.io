@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/data";
 import { ArrowUpRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export const Hero = () => {
   return (
@@ -19,7 +18,7 @@ export const Hero = () => {
           <div className="flex flex-col mb-12">
             <span className="text-4xl md:text-5xl font-bold tracking-tighter mb-2">HELLO 👋</span>
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">
-              I'M <span className="serif italic font-normal text-primary lowercase tracking-normal">Divyanshu</span>
+              I&apos;M <span className="serif italic font-normal text-primary lowercase tracking-normal">Divyanshu</span>
             </h1>
           </div>
 
@@ -33,7 +32,7 @@ export const Hero = () => {
           </motion.div>
 
           <p className="text-xl md:text-2xl font-medium text-foreground max-w-lg mb-8 leading-tight">
-            I'm a Computer Science student specializing in Data Science, focused on building intelligent systems and scalable backend applications.
+            I&apos;m a Computer Science student specializing in Data Science, focused on building intelligent systems and scalable backend applications.
           </p>
 
           <p className="text-base md:text-lg text-secondary-foreground max-w-lg mb-12 leading-relaxed">

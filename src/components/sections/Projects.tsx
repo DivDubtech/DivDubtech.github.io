@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { projects } from "@/data";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export const Projects = () => {
   return (

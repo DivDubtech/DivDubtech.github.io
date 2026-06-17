@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/data";
-import { Mail, Linkedin, Github, FileText, ArrowRight } from "lucide-react";
+import { Mail, Linkedin, Github, FileText } from "lucide-react";
 
 export const Contact = () => {
   return (

@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { experience } from "@/data";
-import { GraduationCap, Award, Briefcase } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 
 export const Experience = () => {
   return (

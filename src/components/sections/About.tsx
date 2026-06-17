@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Brain, Code2, Database, Rocket, Sparkles, TrendingUp } from "lucide-react";
 
 export const About = () => {
   const focuses = [
@@ -70,7 +69,7 @@ export const About = () => {
           className="mt-32 pt-20 border-t border-border/50 text-center"
         >
           <span className="serif italic text-4xl md:text-6xl text-primary/60">
-            "Transforming complex data into <span className="text-foreground not-italic font-black tracking-tighter uppercase">Meaningful</span> experiences."
+            &quot;Transforming complex data into <span className="text-foreground not-italic font-black tracking-tighter uppercase">Meaningful</span> experiences.&quot;
           </span>
         </motion.div>
       </div>

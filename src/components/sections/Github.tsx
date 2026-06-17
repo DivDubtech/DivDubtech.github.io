@@ -69,18 +69,22 @@ export const GithubSection = () => {
               <div className="space-y-4">
                 <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Recent Contributions</div>
                 <div className="h-32 w-full bg-white/5 rounded-xl border border-white/5 p-4 flex items-end justify-between gap-1 overflow-hidden">
-                  {Array.from({ length: 50 }).map((_, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ height: 0 }}
-                      whileInView={{ height: `${Math.random() * 80 + 20}%` }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.01, duration: 0.5 }}
-                      className={`w-full rounded-t-sm ${
-                        i % 5 === 0 ? "bg-primary" : i % 3 === 0 ? "bg-primary/60" : "bg-primary/20"
-                      }`}
-                    />
-                  ))}
+                  {Array.from({ length: 50 }).map((_, i) => {
+                    // Using a predictable pattern instead of Math.random for purity
+                    const height = 20 + ((i * 7) % 80);
+                    return (
+                      <motion.div
+                        key={i}
+                        initial={{ height: 0 }}
+                        whileInView={{ height: `${height}%` }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.01, duration: 0.5 }}
+                        className={`w-full rounded-t-sm ${
+                          i % 5 === 0 ? "bg-primary" : i % 3 === 0 ? "bg-primary/60" : "bg-primary/20"
+                        }`}
+                      />
+                    );
+                  })}
                 </div>
                 <div className="flex justify-between text-[10px] text-muted-foreground font-bold uppercase tracking-widest">
                   <span>Last 6 Months</span>
