@@ -64,13 +64,26 @@ export const Hero = () => {
           className="relative z-10 w-full max-w-md"
         >
           <div className="luxury-card flex flex-col items-center text-center">
-            {/* Placeholder for Profile Image */}
-            <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-accent to-muted mb-8 overflow-hidden shadow-inner flex items-center justify-center">
-              <span className="serif italic text-6xl text-primary/40">DD</span>
+            {/* Profile Image */}
+            <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-accent to-muted mb-8 overflow-hidden shadow-inner flex items-center justify-center relative group/img">
+              <img 
+                src="/profile.jpg" 
+                alt={personalInfo.name} 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = 'none';
+                  (e.target as HTMLImageElement).nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden flex flex-col items-center">
+                <span className="serif italic text-6xl text-primary/40">DD</span>
+              </div>
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-2xl font-black tracking-tighter uppercase">{personalInfo.name}</h3>
+              <h3 className="text-2xl font-black tracking-tighter uppercase">
+                <span className="text-primary">D</span>ivyanshu <span className="text-primary">D</span>ubey
+              </h3>
               <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-secondary-foreground">Data Science Engineer</p>
             </div>
 
