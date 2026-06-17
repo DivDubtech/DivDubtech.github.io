@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-heading);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-cyan-accent: #22D3EE;
+  --color-purple-accent: #8B5CF6;
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --color-border-glow: rgba(59, 130, 246, 0.25);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  --background: #F5F3EF;
+  --foreground: #111111;
+  --card: #FAF8F5;
+  --card-foreground: #111111;
+  --popover: #ECE8E1;
+  --popover-foreground: #111111;
+  --primary: #C6B16A;
+  --primary-foreground: #F5F3EF;
+  --secondary: #ECE8E1;
+  --secondary-foreground: #5F6368;
+  --muted: #E7E2DA;
+  --muted-foreground: #5F6368;
+  --accent: #D9CF9A;
+  --accent-foreground: #111111;
+  --border: #E7E2DA;
+  --input: #E7E2DA;
+  --ring: #C6B16A;
+  --radius: 0.5rem;
+}
+
+/* We'll maintain a subtle dark mode but the primary focus is the editorial light feel */
+.dark {
+  --background: #111111;
+  --foreground: #F5F3EF;
+  --card: #1A1A1A;
+  --card-foreground: #F5F3EF;
+  --primary: #D9CF9A;
+  --border: #2A2A2A;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-accent/30 selection:text-foreground antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv11";
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .serif {
+    font-family: var(--font-serif), serif;
+  }
+  
+  .split-screen {
+    @apply grid grid-cols-1 lg:grid-cols-2 min-h-screen;
+  }
+
+  .luxury-card {
+    @apply bg-card border border-border/50 rounded-2xl p-8 transition-all duration-500;
+    box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.05);
+  }
+}
