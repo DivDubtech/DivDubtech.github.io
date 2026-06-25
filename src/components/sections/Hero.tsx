@@ -67,7 +67,7 @@ export const Hero = () => {
             {/* Profile Image */}
             <div className="w-48 h-48 rounded-2xl bg-gradient-to-br from-accent to-muted mb-8 overflow-hidden shadow-inner flex items-center justify-center relative group/img">
               <img 
-                src="/profile.jpg" 
+                src="/Divyanshu's Photo.jpeg" 
                 alt={personalInfo.name} 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110"
                 onError={(e) => {
@@ -81,8 +81,8 @@ export const Hero = () => {
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-2xl font-black tracking-tighter uppercase">
-                <span className="text-primary">D</span>ivyanshu <span className="text-primary">D</span>ubey
+              <h3 className="text-2xl font-black tracking-tighter text-foreground">
+                Divyanshu Dubey
               </h3>
               <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-secondary-foreground">Data Science Engineer</p>
             </div>
