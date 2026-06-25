@@ -18,7 +18,7 @@ export const Hero = () => {
           <div className="flex flex-col mb-12">
             <span className="text-4xl md:text-5xl font-bold tracking-tighter mb-2">HELLO 👋</span>
             <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none">
-              I&apos;M <span className="serif italic font-normal text-primary lowercase tracking-normal">Divyanshu</span>
+              I&apos;M <span className="serif italic font-normal text-primary tracking-normal">Divyanshu</span>
             </h1>
           </div>
 
